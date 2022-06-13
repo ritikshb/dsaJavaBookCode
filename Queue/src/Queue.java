@@ -23,15 +23,18 @@ public class Queue {
         arr[rear] = value;
     }
     public void dequeue(){
+        int value ;
         if(isEmpty()){
             return;
         }
-        else if(rear == front){
+        else {
+           value = arr[front];
+        }
+        if(front >= rear){
             front = -1;
             rear = -1;
         }
         else{
-            int value = arr[front];
             System.out.println("Dequeue value "+value);
             front++;
         }
